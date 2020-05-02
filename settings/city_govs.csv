@@ -1,26 +1,26 @@
-﻿city,url,name
-广州,http://www.gz.gov.cn/xw/tzgg/mindex.html,通知公告 - 广州市人民政府门户网站_中国广州政府
-北京,http://www.beijing.gov.cn/zhengce/zhengcefagui/,北京市政策法规
-上海,http://www.shanghai.gov.cn/nw2/nw2314/nw2319/nw12344/index.html,上海市近期信息公开
-深圳,http://www.sz.gov.cn/cn/xxgk/bmtx/index.html,便民提醒—深圳政府在线_深圳市人民政府门户网站
-哈尔滨,http://www.harbin.gov.cn/col/col209/index.html#!uid=832&pageNum=1,哈尔滨市人民政府 通知公告
-南宁,http://www.nanning.gov.cn/ywzx/gggs/,公告公示_南宁市人民政府
-太原,,
-长春,http://www.changchun.gov.cn/zw_33994/tzgg/,通知公告 - 长春市人民政府-中国长春_长春政务网
-合肥,http://zwgk.hefei.gov.cn/site/tpl/1661?index=szf&siteId=6784341&pageSize=&15&pageIndex=0&,合肥市政务公开网
-南昌,,
-重庆,,
-天津,http://gk.tj.gov.cn/zxgbxx/bmjqgkxx/index.shtml,通知公告_天津市人民政府
-海口,http://www.haikou.gov.cn/xxgk/szfbjxxgk/ggtz/,公告公示_海口市政府门户网站
-贵阳,http://www.guiyang.gov.cn/zwgk/zfxxgks/fdzdgknr/lzyj/gfxwj/szfbmgfxwj/index.html,贵阳市人民政府-市政府部门规范性文件
-石家庄,http://www.sjz.gov.cn/col/1490076478426/,通知公告-石家庄市人民政府
-成都,http://www.chengdu.gov.cn/chengdu/c135624/cdyqzjz_list.shtml,公告通知
-杭州,http://www.hangzhou.gov.cn/col/col1256291/index.html,中国杭州 市政府文件
-武汉,http://www.wuhan.gov.cn/zwgk/tzgg/,武汉市人民政府门户网站
-南京,,
-长沙,http://www.changsha.gov.cn/szf/tzgg/,长沙市政府门户网站-通知公告
-郑州,http://www.zhengzhou.gov.cn/news6/index.jhtml,通知公告 - 郑州市人民政府
-青岛,,
-沈阳,,
-福州,http://www.fuzhou.gov.cn/tzgg/ylws/,医疗卫生_福州市人民政府
-昆明,http://www.km.gov.cn/gsgg/,昆明市人民政府_公示公告
+city,url,name,main_page_encoding,sub_page_encoding
+广州,http://www.gz.gov.cn/xw/tzgg/mindex.html,通知公告 - 广州市人民政府门户网站_中国广州政府,UTF-8,UTF-8
+北京,http://www.beijing.gov.cn/zhengce/zhengcefagui/,北京市政策法规,UTF-8,UTF-8
+上海,http://www.shanghai.gov.cn/nw2/nw2314/nw2319/nw12344/index.html,上海市近期信息公开,gb2312,gb2312
+深圳,http://www.sz.gov.cn/cn/xxgk/bmtx/index.html,便民提醒—深圳政府在线_深圳市人民政府门户网站,UTF-8,UTF-8
+哈尔滨,http://www.harbin.gov.cn/col/col209/index.html#!uid=832&pageNum=1,哈尔滨市人民政府 通知公告,UTF-8,UTF-8
+南宁,http://www.nanning.gov.cn/ywzx/gggs/,公告公示_南宁市人民政府,UTF-8,UTF-8
+太原,,,UTF-8,UTF-8
+长春,http://www.changchun.gov.cn/zw_33994/tzgg/,通知公告 - 长春市人民政府-中国长春_长春政务网,UTF-8,UTF-8
+合肥,http://zwgk.hefei.gov.cn/site/tpl/1661?index=szf&siteId=6784341&pageSize=&15&pageIndex=0&,合肥市政务公开网,UTF-8,UTF-8
+南昌,,,UTF-8,UTF-8
+重庆,,,UTF-8,UTF-8
+天津,http://gk.tj.gov.cn/zxgbxx/bmjqgkxx/index.shtml,通知公告_天津市人民政府,UTF-8,UTF-8
+海口,http://www.haikou.gov.cn/xxgk/szfbjxxgk/ggtz/,公告公示_海口市政府门户网站,UTF-8,UTF-8
+贵阳,http://www.guiyang.gov.cn/zwgk/zfxxgks/fdzdgknr/lzyj/gfxwj/szfbmgfxwj/index.html,贵阳市人民政府-市政府部门规范性文件,UTF-8,UTF-8
+石家庄,http://www.sjz.gov.cn/col/1490076478426/,通知公告-石家庄市人民政府,UTF-8,UTF-8
+成都,http://www.chengdu.gov.cn/chengdu/c135624/cdyqzjz_list.shtml,公告通知,UTF-8,UTF-8
+杭州,http://www.hangzhou.gov.cn/col/col1256291/index.html,中国杭州 市政府文件,UTF-8,UTF-8
+武汉,http://www.wuhan.gov.cn/zwgk/tzgg/,武汉市人民政府门户网站,UTF-8,UTF-8
+南京,,,UTF-8,UTF-8
+长沙,http://www.changsha.gov.cn/szf/tzgg/,长沙市政府门户网站-通知公告,UTF-8,UTF-8
+郑州,http://www.zhengzhou.gov.cn/news6/index.jhtml,通知公告 - 郑州市人民政府,UTF-8,UTF-8
+青岛,,,UTF-8,UTF-8
+沈阳,,,UTF-8,UTF-8
+福州,http://www.fuzhou.gov.cn/tzgg/ylws/,医疗卫生_福州市人民政府,UTF-8,UTF-8
+昆明,http://www.km.gov.cn/gsgg/,昆明市人民政府_公示公告,UTF-8,UTF-8

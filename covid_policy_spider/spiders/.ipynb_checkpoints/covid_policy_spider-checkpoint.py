@@ -24,14 +24,17 @@ def remove_unchinese(s):
 class AnnouncementSpider(scrapy.spiders.CrawlSpider):
     name = "announcement_spider"
     
-    def __init__(self, city='广州'):
-        
-        if 'results/json/' + city + '.json' in os.listdir('results/json/'):
+    def __init__(self, city='广州', max_page=300):
+        self.MAX_PAGE = max_page
+        #Delete the previous version of the result
+        if city + '.json' in os.listdir('results/json/'):
             os.remove('results/json/' + city + '.json')
-        
-        urlInfo = pd.read_csv('settings/city_govs.csv', index_col='city')
-        self.start_urls = [urlInfo['url'][city]]
-        
+        #Load the starting url and encoding for the city's government website
+        websiteInfo = pd.read_csv('settings/city_govs.csv', index_col='city')
+        self.start_urls = [websiteInfo['url'][city]]
+        self.MAIN_PAGE_ENCODING = websiteInfo['main_page_encoding'][city]
+        self.SUB_PAGE_ENCODING = websiteInfo['sub_page_encoding'][city]
+        #Load the selectors for the city
         selectorInfo = pd.read_csv('settings/selector_settings.csv',index_col = 'city')
         self.NEWS_SELECTOR = selectorInfo['news_selector'][city]
         self.URL_SELECTOR = selectorInfo['url_selector'][city]
@@ -56,49 +59,28 @@ class AnnouncementSpider(scrapy.spiders.CrawlSpider):
     
     def parse(self, response):
         self.counter += 1
-        for news in response.css(self.NEWS_SELECTOR):
-            url = news.css(self.URL_SELECTOR).get()
+        soup = BeautifulSoup(response.body.decode(self.MAIN_PAGE_ENCODING,'ignore'), 'html.parser')
+        for news in soup.select(self.NEWS_SELECTOR):
+            url = news['href']
             url = parse.urljoin(self.start_urls[0],url)
             if url is not None:
                 yield response.follow(url,callback=self.parse_page)
-        next_page = response.css(self.NEXT_PAGE_SELECTOR).get()
-        
-        if next_page is not None and self.counter < 300:
-            yield response.follow(next_page, callback=self.parse)
+        next_page = soup.select_one(self.NEXT_PAGE_SELECTOR)
+        if next_page is not None and self.counter < self.MAX_PAGE:
+            next_page_url = next_page['href']
+            next_page_url = parse.urljoin(self.start_urls[0],next_page_url)
+            yield response.follow(next_page_url, callback=self.parse)
     
     def parse_page(self, response):
-        soup = BeautifulSoup(response.text,'html.parser')
-        if type(self.TITLE_SELECTOR) is str:
-            title = soup.select_one(self.TITLE_SELECTOR).text
-        else:
-            title = None
+        soup = BeautifulSoup(response.body.decode(self.SUB_PAGE_ENCODING,'ignore'),'html.parser')
+        #Select target elements
+        title = self.robust_select(soup, self.TITLE_SELECTOR)
         url = response.url
-
-        if type(self.DATE_SELECTOR) is str:
-            date = soup.select_one(self.DATE_SELECTOR).text
-        else:
-            date = None
-        if type(self.SOURCE_SELECTOR) is str:
-            source = soup.select_one(self.SOURCE_SELECTOR).text
-        else:
-            source = None
-        if type(self.DPRT_SELECTOR) is str:
-            department_raw = soup.select(self.DPRT_SELECTOR)
-            department = ''
-            if type(department_raw) == bs4.element.ResultSet:
-                for part in department_raw:
-                    department += part.text
-            else: 
-                department = department_raw.text
-        else:
-            department = None
-        content_raw = soup.select(self.CONTENT_SELECTOR)
-        content = ''
-        if type(content_raw) == bs4.element.ResultSet:
-            for part in content_raw:
-                content += part.text
-        else: 
-            content = content.text
+        date = self.robust_select(soup, self.DATE_SELECTOR)
+        source = self.robust_select(soup, self.SOURCE_SELECTOR)
+        department = self.robust_select(soup, self.DPRT_SELECTOR)
+        content = self.robust_select(soup, self.CONTENT_SELECTOR)
+        #Check target elements
         if self.page_qualify(title, source, date, department, content):
             yield AnnouncementItem(title=title, url=url, date=date, source=source)
     
@@ -108,6 +90,22 @@ class AnnouncementSpider(scrapy.spiders.CrawlSpider):
     
     def page_qualify_kw(self,content):
         return any(kw in content for kw in self.kwlist1) and any(kw in content for kw in self.kwlist2)
+    
+    def robust_select(self,soup,SELECTOR):
+        if type(SELECTOR) is not str:
+            return None
+        else:
+            res = soup.select(SELECTOR)
+            if res is None:
+                return None
+            else:
+                if len(res) == 1:
+                    return res[0].text
+                else:
+                    rescombined = ''
+                    for part in res:
+                        rescombined += part.text
+                    return rescombined
     
     def return_page(self,response):
         PAGE_SELECTOR = 'a.current::text'
