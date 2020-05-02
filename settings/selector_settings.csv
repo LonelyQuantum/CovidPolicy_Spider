@@ -1,0 +1,26 @@
+﻿city,news_selector,url_selector,next_page_selector,title_selector,date_selector,source_selector,department_selector,content_selector
+广州,ul.news_list>li,a::attr(href),a.next::attr(href),h1.content_title,ul.fl > li.date > span,#laiyuan > b,"#zoomcon > p[style=""text\-align\: right\;""]",#zoomcon > p
+北京,body > div.listBox > ul>li,ul>li>a,a.next::attr(href),div.header>h1,,,,div.mainText>div.view TRS_UEDITOR trs_paper_default trs_web
+上海,ul.uli14 pageList>li,a::attr(href),a.action::attr(href),div#ivs_title,div#ivs_date,,,div.Article_content>div#ivs_content
+深圳,li>span.tit,a::attr(href),a.next::attr(href),div.zx_xxgk_cont>div.tit,div.zx_xxgk_cont>div.tit>h6,div.zx_xxgk_cont>div.tit>h6,,div.news_cont_d_wrap
+哈尔滨,ul.li,a::attr(href),a.default_pgBtn default_pgNext::(href),td.title>h2.title>script,#article > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > ul > li:nth-child(2),,,
+南宁,ul.has_line,a::attr(href),span.arrow nex_num>a::attr(href),div#ucap-title,div.headinfo>span.pubtime,div.headinfo>span.source,,div.view TRS_UEDITOR trs_paper_default trs_word trs_key4format
+太原,,,,,,,,
+长春,ul.currency_ul>li,a::attr(href),div.page>script:nth-child(3)::attr(href),div.xyh_xxynrq>h2,div.pages-date>span.font,div.pages-date>script,,#Zoom
+合肥,ul.doc_list xxgk_lmcon>li,a::attr(href),div.pagination page_6784341::attr(href),h1.newstitle,div.newsinfoleft fl,,,#zoom
+南昌,,,,,,,,
+重庆,,,,,,,,
+天津,div.newslist>ul>li,a::attr(href),a.leftlinkw::attr(href),td>span#span_docTitle,table.table_key>tbody:nth-child(2):nth-child(4),td>span.span_publisher,,body > div.main > div.article > div.article_content01 > div
+海口,ul>li,a::attr(href),div.page::attr(href),div.maincon>h1.maincon-t,div.maincon>h1.maincon-i,,,
+贵阳,ul>li,a::attr(href),a.btn-next::attr(href),#NewsArticleTitle,#NewsArticlePubDay,#NewsArticleSource,tr>td.tablebottom,div.zwxxgk_ndbgwz>h1
+石家庄,ul>li,a::attr(href),a[title=下一页],span#title_,#titN > table > tbody > tr > td:nth-child(1),#titN > table > tbody > tr > td:nth-child(2),,#conN
+成都,ul.list>li,a::attr(href),#page_div > span.pagination-first > a:nth-child(4),body > div.container > div.detail_content.boder_ccc > div.detai_title,div.detail_extend > div.detail_extend1.fl > span:nth-child(1),div.detail_extend > div.detail_extend1.fl > span:nth-child(2),,body > div.container > div.detail_content.boder_ccc > div.text_content
+杭州,#div1256291 > table > tbody > tr > td > table:nth-child(2) > tbody>tr,a::attr(href),a.pgBtn::attr(href),#c > tbody > tr:nth-child(1) > td,body > div:nth-child(3) > table.xxgkinfo > tbody > tr:nth-child(2) > td:nth-child(4), table.xxgkinfo > tbody > tr:nth-child(3) > td:nth-child(2),,#zoom
+武汉,div.articleList > ul>li,a::attr(href),div.articleList > div > a:nth-child(14),div.wrapper.w > div.articleWrapper > div > h2:nth-child(1),body > div.wrapper.w > div.articleWrapper > div > div.sub.clear > div > span:nth-child(2),body > div.wrapper.w > div.articleWrapper > div > div.sub.clear > div > span.resourse,,body > div.wrapper.w > div.articleWrapper > div > div.article > div > div.TRS_Editor > div > div
+南京,,,,,,,,
+长沙,ul>li,a::attr(href),div.bd_new.bd_a80.right_list > div.div_cutPage > a:nth-child(7),#list > div > div.oneColumn.pub_border > h1,#list > div > div.oneColumn.pub_border > div.pages_zz > span:nth-child(2),#list > div > div.oneColumn.pub_border > h1,,#zoom
+郑州,ul.news-list>li,a::attr(href),body > div.main-body > div.main-wrap.main-container > div.tile-region.mt-region > div.tile-group.gold.wide > div > div > div.page-tile > a.next,body > div.main-body > div.main-wrap.main-container > div.tile-region.mt-region > div > div > div > div > div.news_content_wrap > div.news_content_head > div.news_content_title,body > div.main-body > div.main-wrap.main-container > div.tile-region.mt-region > div > div > div > div > div.news_content_wrap > div.news_content_head > div.news_content_date,,,body > div.main-body > div.main-wrap.main-container > div.tile-region.mt-region > div > div > div > div > div.news_content_wrap > div.news_content_body > div
+青岛,,,,,,,,
+沈阳,,,,,,,,
+福州,body > div:nth-child(4) > div.ny_box > div > div:nth-child(4) > div:nth-child(1)>div,a::attr(href),body > div:nth-child(4) > div.ny_box > div > div:nth-child(4) > div.c-txt.pad-T40.pgStyle1 > a:nth-child(10),body > div:nth-child(4) > div.ny_box > div > div.xl_tit,body > div:nth-child(4) > div.ny_box > div > div.clearflx.padTB15 > div.fl.xl_sj > span.xl_sj_icon,body > div:nth-child(4) > div.ny_box > div > div.clearflx.padTB15 > div.fl.xl_sj > span.xl_sj_icon2,,#detailCon
+昆明,ul>li,a::attr(href),#displaypagenum > table > tbody > tr > td > a:nth-child(12) > span,body > div.container > div.listbg_right > div.list_txtsbg > div.txt_bg > div.timu,#pubtime_baidu,#source_baidu,,body > div.container > div.listbg_right > div.list_txtsbg > div.txt_bg > div.txtcen
