@@ -11,9 +11,9 @@
 南昌,,::attr(href),,,,,,
 重庆,,::attr(href),,,,,,
 天津,div.newslist>ul>li>a,::attr(href),a.leftlinkw,td>span#span_docTitle,tbody > tr:nth-child(2) > td:nth-child(4),#span_publisher,,body > div.main > div.article > div.article_content01 > div
-海口,ul>li>p>a,::attr(href),div.main_list > div.list-c > div.page > a:nth-child(11),div.maincon>h1.maincon-t,div.maincon>h1.maincon-i,,,
-贵阳,ul>li>a,::attr(href),a.btn-next,#NewsArticleTitle,#NewsArticlePubDay,#NewsArticleSource,tr>td.tablebottom,div.zwxxgk_ndbgwz>h1
-石家庄,ul>li>a,::attr(href),a[title=下一页],span#title_,#titN > table > tbody > tr > td:nth-child(1),#titN > table > tbody > tr > td:nth-child(2),,#conN
+海口,ul>li>p>a,::attr(href),div.main_list > div.list-c > div.page > a:nth-child(11),div.maincon>h1.maincon-t,div.main > div.maincon > div.maincon-i,div.main > div.maincon > div.maincon-i,,#zl_Articel > div
+贵阳,div.zfxxgk_zdgkc>ul>li>a,::attr(href),a.btn-next,#NewsArticleTitle,#NewsArticlePubDay,#NewsArticleSource,tr>td.tablebottom,#Zoom > div
+石家庄,ul>li>a,::attr(href),#MinyooPage > a:nth-child(6),span#title_,#titN > table > tbody > tr > td:nth-child(1),#titN > table > tbody > tr > td:nth-child(2),,#conN
 成都,ul.list>li>a,::attr(href),#page_div > span.pagination-first > a:nth-child(4),body > div.container > div.detail_content.boder_ccc > div.detai_title,div.detail_extend > div.detail_extend1.fl > span:nth-child(1),div.detail_extend > div.detail_extend1.fl > span:nth-child(2),,body > div.container > div.detail_content.boder_ccc > div.text_content
 杭州,#div1256291 > table > tbody > tr > td > table:nth-child(2) > tbody>tr>a,::attr(href),a.pgBtn::attr(href),#c > tbody > tr:nth-child(1) > td,body > div:nth-child(3) > table.xxgkinfo > tbody > tr:nth-child(2) > td:nth-child(4),table.xxgkinfo > tbody > tr:nth-child(3) > td:nth-child(2),,#zoom
 武汉,div.articleList > ul>li>a,::attr(href),div.articleList > div > a:nth-child(14),div.wrapper.w > div.articleWrapper > div > h2:nth-child(1),body > div.wrapper.w > div.articleWrapper > div > div.sub.clear > div > span:nth-child(2),body > div.wrapper.w > div.articleWrapper > div > div.sub.clear > div > span.resourse,,body > div.wrapper.w > div.articleWrapper > div > div.article > div > div.TRS_Editor > div > div
