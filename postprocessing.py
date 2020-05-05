@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+'''
+Usage: from postprocess import *
+'''
 import pandas as pd
 import json
 import dateparser
@@ -10,6 +14,7 @@ def load_json(path):
         return json.load(file)
 
 def result_format(city):
+    # result_format(city) and it will change the format from .json to .csv
     res_json = load_json(json_path + city + '.json')
     cols = res_json[0].keys()
     res_csv = pd.DataFrame(columns=cols)
