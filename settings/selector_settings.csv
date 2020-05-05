@@ -1,7 +1,7 @@
 ﻿city,news_selector,url_selector,next_page_selector,title_selector,date_selector,source_selector,department_selector,content_selector
 广州,ul.news_list>li>a,::attr(href),a.next,h1.content_title,ul.fl > li.date > span,#laiyuan > b,"#zoomcon > p[style=""text\-align\: right\;""]",#zoomcon > p
 北京,body > div.listBox > ul>li>a,::attr(href),a.next,div.header>h1,,,,#mainText
-上海,#pageList > ul > li>a,::attr(href),a.action,div#ivs_title,div#ivs_date,,,div.Article_content>div#ivs_content>p
+上海,#pageList > ul > li>a,::attr(href),a.action,div#ivs_title,div#ivs_date,,,div#ivs_content>p
 深圳,li>span.tit>a,::attr(href),a.next,div.zx_xxgk_cont>div.tit,div.zx_xxgk_cont>div.tit>h6,div.zx_xxgk_cont>div.tit>h6,,div.news_cont_d_wrap
 哈尔滨,div.default_pgContainer>ul >li>a,::attr(href),table > tbody > tr > td > table > tbody > tr > td:nth-child(8) > a,td.title>h2.title>script,#article > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > ul > li:nth-child(2),,,
 南宁,div.nav1Cont > ul> li > a,::attr(href),#page_div > span:nth-child(13)>a,div#ucap-title,div.headinfo>span.pubtime,div.headinfo>span.source,,#zoom
