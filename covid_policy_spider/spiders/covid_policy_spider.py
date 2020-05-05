@@ -57,25 +57,23 @@ class AnnouncementSpider(scrapy.spiders.CrawlSpider):
                        '暂停部分公交线路','关闭部分地铁出入口','防控'] 
         
         self.kwlist2 = ['冠状病毒','肺炎','新冠','疫情']
-        
-        page.select_one(self.NEXT_PAGE_SELECTOR)
-    
+            
     def parse(self, response):
         self.counter += 1
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
+        #options = webdriver.ChromeOptions()
+        #options.add_argument('headless')
 
-        driver = webdriver.Chrome(options=options)
-        driver.get(self.start_urls)
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        #soup = BeautifulSoup(response.body.decode(self.MAIN_PAGE_ENCODING,'ignore'), 'html.parser')
+        #driver = webdriver.Chrome(options=options)
+        #driver.get(self.start_urls)
+        #soup = BeautifulSoup(driver.page_source, 'html.parser')
+        soup = BeautifulSoup(response.body.decode(self.MAIN_PAGE_ENCODING,'ignore'), 'html.parser')
         for news in soup.select(self.NEWS_SELECTOR):
             url = news['href']
             url = parse.urljoin(self.start_urls[0],url)
             if url is not None:
                 yield response.follow(url,callback=self.parse_page)
+                
         next_page = soup.select_one(self.NEXT_PAGE_SELECTOR)
-        
         if next_page is not None and self.counter < self.MAX_PAGE:
             next_page_url = next_page['href']
             next_page_url = parse.urljoin(self.start_urls[0],next_page_url)
