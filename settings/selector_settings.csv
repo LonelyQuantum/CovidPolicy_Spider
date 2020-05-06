@@ -6,7 +6,7 @@
 哈尔滨,div.default_pgContainer>ul >li>a,::attr(href),table > tbody > tr > td > table > tbody > tr > td:nth-child(8) > a,td.title>h2.title>script,#article > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > ul > li:nth-child(2),,,
 南宁,div.nav1Cont > ul> li > a,::attr(href),#page_div > span:nth-child(13)>a,div#ucap-title,div.headinfo>span.pubtime,div.headinfo>span.source,,#zoom
 太原,,::attr(href),,,,,,
-长春,ul.currency_ul>li>a,::attr(href),div.xyh_leftlist > div > div.page > a:nth-child(4),div.xyh_xxynrq>h2,div.pages-date>span.font,,,#Zoom
+长春,div.xyh_listul>ul.currency_ul>li>a,::attr(href),div.xyh_leftlist > div > div.page > a:nth-child(4),div.xyh_xxynrq>h2,div.pages-date>span.font,,,#Zoom
 合肥,li.odd>a,::attr(href),div.pagination page_6784341,h1.newstitle,table.table_suoyin.hidden-lg.hidden-md > tbody > tr:nth-child(4) > td.pmingcheng,,,#zoom
 南昌,,::attr(href),,,,,,
 重庆,,::attr(href),,,,,,
