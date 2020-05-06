@@ -26,7 +26,7 @@ class AnnouncementSpider(scrapy.spiders.CrawlSpider):
 
     
     def __init__(self, city='广州', max_page=50):
-        self.MAX_PAGE = max_page
+        self.MAX_PAGE = int(max_page)
         #Delete the previous version of the result
         if city + '.json' in os.listdir('results/json/'):
             os.remove('results/json/' + city + '.json')

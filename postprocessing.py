@@ -23,7 +23,7 @@ def result_format(city):
     res_csv = pd.DataFrame(columns=cols)
     for item in res_json:
         date_cur = re.findall(date_pattern,item['date'])
-        item['date'] = dateparser.parse(date_pattern)
+        item['date'] = dateparser.parse(date_cur[0])
         res_csv = res_csv.append(item, ignore_index=True)
     res_csv['date'] = pd.to_datetime(res_csv['date'])
     res_csv = res_csv.sort_values(by='date')
